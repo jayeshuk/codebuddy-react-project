@@ -22,6 +22,10 @@ const Home = () => {
         Posts
         <Icon icon="mdi:arrow-right" className="ml-2" />
       </Link>
+      <Link to="/register" className="flex items-center text-blue-600 hover:underline">
+        Register User
+        <Icon icon="mdi:arrow-right" className="ml-2" />
+      </Link>
     </div>
   );
 };
