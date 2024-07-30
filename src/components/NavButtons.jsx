@@ -18,7 +18,6 @@ function NavButtons({ user, setUser, formIndex, handleChange, handleValidation }
     if (formIndex === 3) {
       try {
         const response = await axios.post("https://codebuddy.review/submit", formData);
-        console.log("Form submitted successfully:", response.data);
         if (response.data) {
           setUser({
             emailId: "",

@@ -1,17 +1,20 @@
-import React from 'react'
-
-function ErrorLine({text}) {
+import PropTypes from "prop-types";
+function ErrorLine({ text }) {
   return (
     <div>
-        <p style={styles.error}>{text}</p>
+      <p style={styles.error}>{text}</p>
     </div>
-  )
+  );
 }
 
 const styles = {
-    error:{
-        color:"red"
-    }
-}
+  error: {
+    color: "red",
+  },
+};
 
-export default ErrorLine
+ErrorLine.propTypes = {
+  text: PropTypes.string,
+};
+
+export default ErrorLine;

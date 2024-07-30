@@ -12,7 +12,6 @@ const Posts = () => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get("https://codebuddy.review/posts");
-        console.log(response.data);
         setPosts(response.data.data);
       } catch (err) {
         setError(err);
