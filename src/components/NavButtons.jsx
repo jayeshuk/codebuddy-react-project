@@ -42,7 +42,7 @@ function NavButtons({ user, setUser, formIndex, handleChange, handleValidation }
     <div style={{ marginTop: "5%" }}>
       <Stack spacing={2} direction="row">
         {formIndex !== 1 && (
-          <Button variant="text" onClick={() => handleChange({}, formIndex - 1)}>
+          <Button variant="text" onClick={() => handleChange({}, formIndex - 2)}>
             Back
           </Button>
         )}

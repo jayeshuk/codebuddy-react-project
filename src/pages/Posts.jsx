@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Icon } from "@iconify/react";
+import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 
 const Posts = () => {
@@ -38,7 +39,10 @@ const Posts = () => {
         {posts.length > 0 ? (
           posts.map((post) => (
             <div key={post.id} className="rounded-lg bg-white p-7 shadow-lg">
-              <h2 className="text-2xl font-bold">{post.firstName + " " + post.lastName}</h2>
+              <div className="my-4 flex items-center">
+                <Avatar alt="Remy Sharp" src={post.avatar} />
+                <h2 className="ml-4 text-2xl font-bold">{post.firstName + " " + post.lastName}</h2>
+              </div>
               <p className="text-gray-700">{post.writeup}</p>
             </div>
           ))
